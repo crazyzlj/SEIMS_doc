@@ -43,7 +43,7 @@ before_install:
 - chmod +x ./doc/ci/travis/${BUILD_NAME}/before_install.sh
 #- ./doc/ci/travis/${BUILD_NAME}/before_install.sh
 install:
-- chmod +x ./doc/travis_doxygen.sh
+- chmod +x ./doc/travis-doxygen.sh
 - chmod +x ./doc/ci/travis/${BUILD_NAME}/install.sh
 - ./doc/ci/travis/${BUILD_NAME}/install.sh
 script:
