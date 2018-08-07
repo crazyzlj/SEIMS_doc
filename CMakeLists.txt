@@ -1,0 +1,39 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+if(POLICY CMP0025)
+  # detect Apple's Clang
+  cmake_policy(SET CMP0025 NEW)
+endif()
+if(POLICY CMP0054)
+  cmake_policy(SET CMP0054 NEW)
+endif()
+
+PROJECT(SEIMS_doc)
+
+### Build Postfix
+SET(CMAKE_DEBUG_POSTFIX "d" CACHE STRING "Default Debug postfix")
+SET(CMAKE_RELEASE_POSTFIX "" CACHE STRING "Default Release postfix")
+SET(CMAKE_RELWITHDEBINFO_POSTFIX "rd" CACHE STRING "Default RelWithDebInfo postfix")
+SET(CMAKE_MINSIZEREL_POSTFIX "s" CACHE STRING "Default MinSizeRel postfix")
+IF (CMAKE_BUILD_TYPE MATCHES "Release")
+  SET(CMAKE_BUILD_POSTFIX "${CMAKE_RELEASE_POSTFIX}")
+ELSEIF (CMAKE_BUILD_TYPE MATCHES "MinSizeRel")
+  SET(CMAKE_BUILD_POSTFIX "${CMAKE_MINSIZEREL_POSTFIX}")
+ELSEIF(CMAKE_BUILD_TYPE MATCHES "RelWithDebInfo")
+  SET(CMAKE_BUILD_POSTFIX "${CMAKE_RELWITHDEBINFO_POSTFIX}")
+ELSEIF(CMAKE_BUILD_TYPE MATCHES "Debug")
+  SET(CMAKE_BUILD_POSTFIX "${CMAKE_DEBUG_POSTFIX}")
+ELSE()
+  SET(CMAKE_BUILD_POSTFIX "")
+ENDIF()
+
+# Build all binaries in a separate directory
+SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+option(SEIMS_BUILD_DOC "Build SEIMS documentation." ON)
+if(SEIMS_BUILD_DOC)
+    add_subdirectory(doc)
+endif()
+
+add_custom_target(travis_doc)
+add_custom_command(TARGET travis_doc
+    COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/doc/travis-doxygen.sh)
