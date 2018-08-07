@@ -90,5 +90,5 @@ SEIMS workflow can be summarized as five part.
 
 
 ## Contact Us
-Dr. Liang-Jun Zhu (zlj@lreis.ac.cn)
-Asso. Prof. Junzhi Liu (liujunzhi@njnu.edu.cn)
++ Dr. Liang-Jun Zhu (zlj@lreis.ac.cn)
++ Asso. Prof. Junzhi Liu (liujunzhi@njnu.edu.cn)
