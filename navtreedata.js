@@ -1,7 +1,7 @@
 var NAVTREE =
 [
   [ "SEIMS", "index.html", [
-    [ "# SEIMS", "index.html", null ],
+    [ "SEIMS: A modular and parallelized watershed modeling framework", "index.html", null ],
     [ "Features", "md_doc_features.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
