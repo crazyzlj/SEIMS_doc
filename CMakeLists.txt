@@ -27,9 +27,17 @@ ELSE()
 ENDIF()
 
 # Build all binaries in a separate directory
-SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+### Set default or specified installation directory.
+IF (INSTALL_PREFIX)
+    SET(CMAKE_INSTALL_PREFIX ${INSTALL_PREFIX} CACHE PATH "Set specified install path" FORCE)
+ELSEIF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+    SET(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/bin CACHE PATH "Set default install path" FORCE)
+ENDIF ()
+SET(INSTALL_DIR ${CMAKE_INSTALL_PREFIX})
+SET(DOC_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/doc" CACHE PATH "Path to the documentation")
 
-option(SEIMS_BUILD_DOC "Build SEIMS documentation." ON)
+
+option(SEIMS_BUILD_DOC "Build SEIMS documentation." OFF)
 if(SEIMS_BUILD_DOC)
     add_subdirectory(doc)
 endif()
