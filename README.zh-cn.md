@@ -1,9 +1,6 @@
-# SEIMS
--------
+## SEIMS：轻量化、模块化、并行化的流域建模框架
 
-## 一个轻量级、模块化、并行化的流域建模框架
-
-Copyright (C) 2018 [Lreis](http://www.lreis.ac.cn), [IGSNRR](http://english.igsnrr.cas.cn), [CAS](http://english.cas.cn). All rights reserved.
+Copyright (C) 2018 [Lreis](http://www.lreis.ac.cn), [IGSNRR](http://www.igsnrr.cas.cn), [CAS](http://www.cas.cn). All rights reserved.
 
 * [SEIMS GitHub](https://github.com/lreis2415/SEIMS)
 * SEIMS Documentations
@@ -18,6 +15,8 @@ Copyright (C) 2018 [Lreis](http://www.lreis.ac.cn), [IGSNRR](http://english.igsn
 
 ## 1 简介
 
++　[特点](doc/features.zh-cn.md)
+
 ## 联系我们
-朱良君 (zlj@lreis.ac.cn)
-刘军志 (liujunzhi@njnu.edu.cn)
++ 朱良君 (zlj@lreis.ac.cn)
++ 刘军志 (liujunzhi@njnu.edu.cn)
