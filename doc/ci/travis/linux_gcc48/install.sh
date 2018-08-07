@@ -10,9 +10,9 @@ cd build
 # Do not compile UnitTest: -DUNITTEST=1
 cmake .. -DCMAKE_BUILD_TYPE=Release -DSEIMS_BUILD_DOC=ON -DINSTALL_PREFIX=/home/travis/build/lreis2415/SEIMS/seims_linux_gcc48/bin
 make -j4
-make install
 # Automatic documentation
 make travis_doc
+make install
 cd ..
 ls
 # copy files to releases for deployment
