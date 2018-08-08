@@ -5,6 +5,8 @@
     @changelog: 2018-08-08 - lj - Initial implementation.
 """
 import os
+import re
+from inspect import getsourcefile
 
 
 def current_path(local_function):
@@ -13,11 +15,35 @@ def current_path(local_function):
     Examples:
         curpath = current_path(lambda: 0)
     """
-    from inspect import getsourcefile
     fpath = getsourcefile(local_function)
     if fpath is None:
         return None
     return os.path.dirname(os.path.abspath(fpath))
+
+
+def regrex_find_md_link(test_str, prefix):
+    regex = r"(?:(\[.+?\]\(.+?\.md\)))"
+    matches = re.finditer(regex, test_str, re.IGNORECASE)
+    replaced_str = test_str[:]
+    flag = False
+    for matchNum, match in enumerate(matches):
+        matchNum = matchNum + 1
+        print("Match {matchNum} was found at {start}-{end}: {match}".format(matchNum=matchNum,
+                                                                            start=match.start(),
+                                                                            end=match.end(),
+                                                                            match=match.group()))
+        substr = test_str[match.start():match.end()]
+        if 'https://' in substr:
+            continue
+        i = substr.find('](')
+        j = replaced_str.find(substr)
+        replaced_str = replaced_str[: i + j + 2] + prefix + replaced_str[i + j + 2:]
+        flag = True
+    if flag:
+        print(test_str)
+        print(replaced_str)
+    return replaced_str
+
 
 def replace_relative_paths(filepath, relative_path):
     print('Replace relative paths of %s' % filepath)
@@ -25,35 +51,40 @@ def replace_relative_paths(filepath, relative_path):
     with open(filepath, 'r') as f:
         for line in f.readlines():
             lines.append(line.strip())
-    rewrite = false
+    rewrite = False
+    new_lines = list()
     for line in lines:
-        
+        new_lines.append(regrex_find_md_link(line, relative_path))
     if rewrite:
         with open(filepath, 'w') as f:
             for line in lines:
                 f.write(line + os.linesep)
+
 
 def main(fpath, relative_path):
     entries = os.listdir(fpath)
     for entry in entries:
         tmppath = fpath + os.sep + entry
         if os.path.isdir(tmppath):
-            relative_path += os.sep + entry
+            relative_path += '%s/' % entry
             main(tmppath, relative_path)
         else:
             name, ext = os.path.splitext(entry)
-            if not ext.upper() == 'MD':
+            if not ext.upper() == '.MD':
+                continue
+            if 'SUMMARY' == name.upper():
                 continue
             replace_relative_paths(tmppath, relative_path)
 
+
 if __name__ == '__main__':
     cpath = current_path(lambda: 0)
-    topname = os.path.split(cpath)[-1]  # By default this should be 'doc'
+    topname = os.path.split(cpath)[-1] + '/'  # By default this should be 'doc/'
     langs = ['en', 'zh-cn']
     for lang in langs:
         nextdir = cpath + os.sep + lang
         if not os.path.exists(nextdir):
             print('%s is not existed!' % nextdir)
             continue
-        topname += os.sep + lang
+        topname += '%s/' % lang
         main(nextdir, topname)
