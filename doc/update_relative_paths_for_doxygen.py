@@ -88,5 +88,4 @@ if __name__ == '__main__':
         if not os.path.exists(nextdir):
             print('%s is not existed!' % nextdir)
             continue
-        topname += '%s/' % lang
-        main(nextdir, topname)
+        main(nextdir, '%s%s/' % (topname, lang))
