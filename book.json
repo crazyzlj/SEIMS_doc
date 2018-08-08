@@ -4,18 +4,4 @@
 	"title":"SEIMS Documentation Version 2018",
 	"description":"",
 	"author":"Liang-Jun Zhu",
-	"extension":"pdf",
-    "pdf": {
-        "pageNumbers": true,
-        "fontSize": 12,
-        "paperSize": "a4",
-        "margin": {
-            "right": 62,
-            "left": 62,
-            "top": 36,
-            "bottom": 36
-		},
-		"headerTemplate": "_SECTION_",
-        "footerTemplate": "_PAGENUM_"
-    }
 }
