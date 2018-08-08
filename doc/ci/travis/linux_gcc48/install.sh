@@ -6,6 +6,8 @@ mkdir -p seims_linux_gcc48/bin
 #mkdir -p seims_linux_gcc48/seims
 # Release version
 mkdir build
+# Update relative paths in Markdown files for Doxygen
+python ./doc/update_relative_paths_for_doxygen.py
 cd build
 # Do not compile UnitTest: -DUNITTEST=1
 cmake .. -DCMAKE_BUILD_TYPE=Release -DSEIMS_BUILD_DOC=ON -DINSTALL_PREFIX=/home/travis/build/lreis2415/SEIMS/seims_linux_gcc48/bin
