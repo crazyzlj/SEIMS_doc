@@ -2,7 +2,7 @@ var NAVTREE =
 [
   [ "SEIMS", "index.html", [
     [ "SEIMS: A modular and parallelized watershed modeling framework", "index.html", null ],
-    [ "Features", "md_doc_en_doc_features.html", null ],
+    [ "Features", "autotoc_md11.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Members", "functions.html", [
