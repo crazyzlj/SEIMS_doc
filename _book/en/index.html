@@ -1,0 +1,324 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Introduction · SEIMS Documentation Version 2018</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Liang-Jun Zhu">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="features.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Part I. Introduction</li>
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="features.html">
+            
+                <a href="features.html">
+            
+                    
+                    Features
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Introduction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="seims-a-modular-and-parallelized-watershed-modeling-framework">SEIMS: A modular and parallelized watershed modeling framework</h2>
+<p>Copyright (C) 2018 <a href="http://www.lreis.ac.cn" target="_blank">Lreis</a>, <a href="http://english.igsnrr.cas.cn" target="_blank">IGSNRR</a>, <a href="http://english.cas.cn" target="_blank">CAS</a>. All rights reserved.</p>
+<ul>
+<li><a href="https://github.com/lreis2415/SEIMS" target="_blank">SEIMS GitHub</a></li>
+<li>SEIMS Documentations<ul>
+<li><a href="https://crazyzlj.github.io/SEIMS_doc" target="_blank">English</a></li>
+<li><a href="https://crazyzlj.github.io/SEIMS_doc/zh-cn" target="_blank">&#x7B80;&#x4F53;&#x4E2D;&#x6587;</a></li>
+<li><a href="https://www.gitbook.com/book/crazyzlj/SEIMS_doc_test/details/zh-cn" target="_blank">GitBook</a> with downloadable PDF/EPUB/MOBI files, without API reference.</li>
+</ul>
+</li>
+</ul>
+<h2 id="selected-build-status">Selected build status:</h2>
+<ul>
+<li>Windows-MSVC 2013-64bit with MSMPI-v8: <a href="https://ci.appveyor.com/project/lreis-2415/seims/branch/master" target="_blank"><img src="https://ci.appveyor.com/api/projects/status/i3mxjy0wjgphcyu1/branch/master?svg=true" alt="Build status"></a></li>
+<li>Linux(Ubuntu trusty)-GCC-4.8 with MPICH2-3.0.4: <a href="https://travis-ci.org/lreis2415/SEIMS" target="_blank"><img src="https://travis-ci.org/lreis2415/SEIMS.svg?branch=master" alt="Build Status"></a></li>
+</ul>
+<h2 id="1brief-introduction">1.Brief introduction</h2>
+<p>The <strong>Spatially Explicit Integrated Modeling System</strong> (<strong>SEIMS</strong>), is an integrated, modular, parallelized, fully-distributed watershed modeling and scenario analysis system.</p>
+<p>SEIMS is mainly written by C++ with support of <a href="https://github.com/OSGeo/gdal" target="_blank">GDAL</a>, <a href="https://github.com/mongodb/mongo-c-driver" target="_blank">Mongo-C-Driver</a>, <a href="https://en.wikipedia.org/wiki/OpenMP" target="_blank">OpenMP</a> and/or <a href="https://en.wikipedia.org/wiki/Message_Passing_Interface" target="_blank">MPI</a>, while Python is used for organizing the preprocessing, postprocessing, scenario analysis, etc. workflows. SEIMS is intented to be an open-source, cross-platform, and high performaced integrated watershed modeling system. Theoretically, SEIMS could be compiled by common used compiler (e.g. MSVC 2010+, GCC 4.6+, and Intel C++ 12.0+) as 32-bit or 64-bit programs and run on any mainstream OS (e.g. Windows, Linux, and macOS).</p>
+<p>SEIMS contains several module catogories, include <strong>Hydrology, Erosion, Nutrient, Plant Growth, BMP Management</strong>, etc. Algorithms are integrated from SWAT, LISEM, WetSpa Extension, DHSVM, CASC2D, etc.</p>
+<p>SEIMS is still being developing and any constructive feedback (issues or push requests) will be welcome and appreciated.</p>
+<h2 id="2wiki">2.Wiki</h2>
+<p>Currently, only Chinese-version wiki is provided and hosted on Github, English-version will be available in the near future. More information on <a href="https://github.com/lreis2415/SEIMS/wiki" target="_blank">SEIMS Wiki</a>.</p>
+<h2 id="3get-started">3.Get Started</h2>
+<h3 id="31get-source-code">3.1.Get source code</h3>
+<ul>
+<li>Download or clone from <a href="https://github.com/lreis2415/SEIMS" target="_blank">Github</a>. A useful Github guidiance can be found <a href="https://github.com/lreis2415/SEIMS/wiki/Git-guidance" target="_blank">here</a>.</li>
+<li>Read the <a href="https://github.com/lreis2415/SEIMS/blob/master/seims/README.md" target="_blank">basic code structure</a>.</li>
+</ul>
+<h3 id="32compile-and-install">3.2.Compile and Install</h3>
+<ul>
+<li><a href="https://github.com/lreis2415/SEIMS2017/wiki/Windows" target="_blank">Windows</a></li>
+<li><a href="https://github.com/lreis2415/SEIMS2017/wiki/Linux" target="_blank">Linux</a></li>
+<li><a href="https://github.com/lreis2415/SEIMS2017/wiki/macOS" target="_blank">macOS</a></li>
+</ul>
+<p>Generally, with the required dependencies (i.e., cmake, C++ compiler, GDAL, mongo-c-driver), the compilation and installation should follows:</p>
+<pre><code class="lang-shell">cd &lt;path-to-SEIMS&gt;
+mkdir build
+cd build
+cmake ..
+make -j4
+make install
+</code></pre>
+<p>Besides, Python 2.7+ with Numpy, GDAL, pymongo, matplotlib, etc. is also required.</p>
+<h3 id="33config-mongodb-database">3.3.Config MongoDB database</h3>
+<ul>
+<li><a href="https://github.com/lreis2415/SEIMS2017/wiki/MongoDB-install-and-config" target="_blank">Install MongoDB client and start mongo service automatically.</a></li>
+<li>You may need a MongoDB IDE to view and edit data. MongoVUE, Robo 3T (formerly Robomongo), or Mongo Explorer for JetBrains (e.g. PyCharm, CLion) are recommended.</li>
+</ul>
+<h3 id="34run-the-demo-data">3.4.Run the Demo data</h3>
+<p>Demo data is provided in <code>~/data/dianbu2</code>. The common steps for testing SEIMS with the demo data are as follows:</p>
+<pre><code class="lang-shell">cd SEIMS
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make -j4
+make install
+cd ..
+# Run demo data, e.g., dianbu2 watershed
+python seims/test/demo_dianbu2_preprocess.py
+python seims/test/demo_dianbu2_runmodel.py
+python seims/test/demo_dianbu2_postprocess.py
+# TO BE CONTINUED...
+</code></pre>
+<h3 id="35build-your-own-model">3.5.Build your own model</h3>
+<p>Now, you can build you own SEIMS model!</p>
+<p>SEIMS workflow can be summarized as five part.</p>
+<ul>
+<li>a) <a href="https://github.com/lreis2415/SEIMS2017/wiki/Data-preparation" target="_blank">Data preparation</a> and <a href="https://github.com/lreis2415/SEIMS2017/wiki/Data-preprocess" target="_blank">Preprocessing for SEIMS</a></li>
+<li>b) <a href="https://github.com/lreis2415/SEIMS2017/wiki/Executation-and-calibration" target="_blank">Run SEIMS model</a></li>
+<li>c) <a href="https://github.com/lreis2415/SEIMS2017/wiki/result-postprocess" target="_blank">Postprocess, e.g. export hydrograph</a></li>
+<li>d) Model calibration</li>
+<li>e) Scenario analysis</li>
+</ul>
+<ul>
+<li><a href="doc/zh-cn/features.zh-cn.md">Features</a></li>
+</ul>
+<h2 id="contact-us">Contact Us</h2>
+<ul>
+<li>Dr. Liang-Jun Zhu (zlj@lreis.ac.cn)</li>
+<li>Asso. Prof. Junzhi Liu (liujunzhi@njnu.edu.cn)</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="features.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Features">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Features","level":"1.2","depth":1,"path":"features.md","ref":"features.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","versions-select"],"root":"doc","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"versions":{"type":"languages"},"search-plus":{},"versions-select":{"type":"branches"},"livereload":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Liang-Jun Zhu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SEIMS Documentation Version 2018","language":"en","gitbook":"*","description":""},"file":{"path":"README.md","mtime":"2018-08-08T05:35:20.118Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-08T05:45:42.314Z"},"basePath":".","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

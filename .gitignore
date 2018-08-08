@@ -26,3 +26,7 @@ DartConfiguration.tcl
 
 # Files created by OS
 *.DS_Store
+
+# For gitbook
+node_modules
+_book
