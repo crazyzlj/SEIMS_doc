@@ -91,7 +91,7 @@ var NAVTREEINDEX0 =
 "functions_vars.html":[2,1,2],
 "index.html":[],
 "index.html":[0],
-"md_doc_features.html":[1],
+"md_doc_en_features.html":[1],
 "pages.html":[],
 "parallel_8h_source.html":[3,0,0,0,0,1,0,2]
 };
