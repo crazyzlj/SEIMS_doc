@@ -1,6 +1,6 @@
 
 
-## SEIMS: A modular and parallelized watershed modeling framework
+# SEIMS: A modular and parallelized watershed modeling framework
 
 Copyright (C) 2018 [Lreis](http://www.lreis.ac.cn), [IGSNRR](http://english.igsnrr.cas.cn), [CAS](http://english.cas.cn). All rights reserved.
 
@@ -15,7 +15,9 @@ Copyright (C) 2018 [Lreis](http://www.lreis.ac.cn), [IGSNRR](http://english.igsn
 + Windows-MSVC 2013-64bit with MSMPI-v8: [![Build status](https://ci.appveyor.com/api/projects/status/i3mxjy0wjgphcyu1/branch/master?svg=true)](https://ci.appveyor.com/project/lreis-2415/seims/branch/master)
 + Linux(Ubuntu trusty)-GCC-4.8 with MPICH2-3.0.4: [![Build Status](https://travis-ci.org/lreis2415/SEIMS.svg?branch=master)](https://travis-ci.org/lreis2415/SEIMS)
 
-## 1.Brief introduction
+[TOC]
+
+## Brief introduction
 
 The **Spatially Explicit Integrated Modeling System** (**SEIMS**), is an integrated, modular, parallelized, fully-distributed watershed modeling and scenario analysis system.
 
@@ -25,16 +27,16 @@ SEIMS contains several module catogories, include **Hydrology, Erosion, Nutrient
 
 SEIMS is still being developing and any constructive feedback (issues or push requests) will be welcome and appreciated.
 
-## 2.Wiki
+## Wiki
 Currently, only Chinese-version wiki is provided and hosted on Github, English-version will be available in the near future. More information on [SEIMS Wiki](https://github.com/lreis2415/SEIMS/wiki).
 
-## 3.Get Started
-### 3.1.Get source code
+## Get Started
+### Get source code
 
 + Download or clone from [Github](https://github.com/lreis2415/SEIMS). A useful Github guidiance can be found [here](https://github.com/lreis2415/SEIMS/wiki/Git-guidance).
 + Read the [basic code structure](https://github.com/lreis2415/SEIMS/blob/master/seims/README.md).
 
-### 3.2.Compile and Install
+### Compile and Install
 
 + [Windows](https://github.com/lreis2415/SEIMS2017/wiki/Windows)
 + [Linux](https://github.com/lreis2415/SEIMS2017/wiki/Linux)
@@ -53,12 +55,12 @@ make install
 
 Besides, Python 2.7+ with Numpy, GDAL, pymongo, matplotlib, etc. is also required.
 
-### 3.3.Config MongoDB database
+### Config MongoDB database
 
 + [Install MongoDB client and start mongo service automatically.](https://github.com/lreis2415/SEIMS2017/wiki/MongoDB-install-and-config)
 + You may need a MongoDB IDE to view and edit data. MongoVUE, Robo 3T (formerly Robomongo), or Mongo Explorer for JetBrains (e.g. PyCharm, CLion) are recommended.
 
-### 3.4.Run the Demo data
+### Run the Demo data
 Demo data is provided in `~/data/dianbu2`. The common steps for testing SEIMS with the demo data are as follows:
 
 ```shell
@@ -76,7 +78,7 @@ python seims/test/demo_dianbu2_postprocess.py
 # TO BE CONTINUED...
 ```
 
-### 3.5.Build your own model
+### Build your own model
 Now, you can build you own SEIMS model!
 
 SEIMS workflow can be summarized as five part.
@@ -88,7 +90,7 @@ SEIMS workflow can be summarized as five part.
 + e) Scenario analysis
 
 
-+ [Features](./features.md)
++ [Features](features.md)
 
 ## Contact Us
 + Dr. Liang-Jun Zhu (zlj@lreis.ac.cn)

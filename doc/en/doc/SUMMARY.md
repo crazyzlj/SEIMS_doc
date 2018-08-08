@@ -1,7 +1,9 @@
 # Summary
 
-## [Part I. Introduction](README.md)
+## Introduction
 
+* [Introduction](README.md)
+    * [Contact us](README.md#contact-us)
 * [Features](features.md)
 
 
