@@ -88,7 +88,7 @@ SEIMS workflow can be summarized as five part.
 + e) Scenario analysis
 
 
-+ [Features](features.md)
++ [Features](./features.md)
 
 ## Contact Us
 + Dr. Liang-Jun Zhu (zlj@lreis.ac.cn)
