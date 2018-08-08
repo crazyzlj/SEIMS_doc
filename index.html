@@ -99,51 +99,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 <h2>Selected build status:</h2>
 <ul>
 <li>Windows-MSVC 2013-64bit with MSMPI-v8: <a href="https://ci.appveyor.com/project/lreis-2415/seims/branch/master"></a></li>
-<li>Linux(Ubuntu trusty)-GCC-4.8 with MPICH2-3.0.4: <a href="https://travis-ci.org/lreis2415/SEIMS"></a></li>
-</ul>
-<h2>1.Brief introduction</h2>
-<p>The <b>Spatially Explicit Integrated Modeling System</b> (<b>SEIMS</b>), is an integrated, modular, parallelized, fully-distributed watershed modeling and scenario analysis system.</p>
-<p>SEIMS is mainly written by C++ with support of <a href="https://github.com/OSGeo/gdal">GDAL</a>, <a href="https://github.com/mongodb/mongo-c-driver">Mongo-C-Driver</a>, <a href="https://en.wikipedia.org/wiki/OpenMP">OpenMP</a> and/or <a href="https://en.wikipedia.org/wiki/Message_Passing_Interface">MPI</a>, while Python is used for organizing the preprocessing, postprocessing, scenario analysis, etc. workflows. SEIMS is intented to be an open-source, cross-platform, and high performaced integrated watershed modeling system. Theoretically, SEIMS could be compiled by common used compiler (e.g. MSVC 2010+, GCC 4.6+, and Intel C++ 12.0+) as 32-bit or 64-bit programs and run on any mainstream OS (e.g. Windows, Linux, and macOS).</p>
-<p>SEIMS contains several module catogories, include <b>Hydrology, Erosion, Nutrient, Plant Growth, BMP Management</b>, etc. Algorithms are integrated from SWAT, LISEM, WetSpa Extension, DHSVM, CASC2D, etc.</p>
-<p>SEIMS is still being developing and any constructive feedback (issues or push requests) will be welcome and appreciated.</p>
-<h2>2.Wiki</h2>
-<p>Currently, only Chinese-version wiki is provided and hosted on Github, English-version will be available in the near future. More information on <a href="https://github.com/lreis2415/SEIMS/wiki">SEIMS Wiki</a>.</p>
-<h2>3.Get Started</h2>
-<h3>3.1.Get source code</h3>
-<ul>
-<li>Download or clone from <a href="https://github.com/lreis2415/SEIMS">Github</a>. A useful Github guidiance can be found <a href="https://github.com/lreis2415/SEIMS/wiki/Git-guidance">here</a>.</li>
-<li>Read the https://github.com/lreis2415/SEIMS/blob/master/seims/README.md "basic code structure".</li>
-</ul>
-<h3>3.2.Compile and Install</h3>
-<ul>
-<li><a href="https://github.com/lreis2415/SEIMS2017/wiki/Windows">Windows</a></li>
-<li><a href="https://github.com/lreis2415/SEIMS2017/wiki/Linux">Linux</a></li>
-<li><a href="https://github.com/lreis2415/SEIMS2017/wiki/macOS">macOS</a></li>
-</ul>
-<p>Generally, with the required dependencies (i.e., cmake, C++ compiler, GDAL, mongo-c-driver), the compilation and installation should follows:</p>
-<div class="fragment"><div class="line">cd &lt;path-to-SEIMS&gt;</div><div class="line">mkdir build</div><div class="line">cd build</div><div class="line">cmake ..</div><div class="line">make -j4</div><div class="line">make install</div></div><!-- fragment --><p>Besides, Python 2.7+ with Numpy, GDAL, pymongo, matplotlib, etc. is also required.</p>
-<h3>3.3.Config MongoDB database</h3>
-<ul>
-<li><a href="https://github.com/lreis2415/SEIMS2017/wiki/MongoDB-install-and-config">Install MongoDB client and start mongo service automatically.</a></li>
-<li>You may need a MongoDB IDE to view and edit data. MongoVUE, Robo 3T (formerly Robomongo), or Mongo Explorer for JetBrains (e.g. PyCharm, CLion) are recommended.</li>
-</ul>
-<h3>3.4.Run the Demo data</h3>
-<p>Demo data is provided in <code>~/data/dianbu2</code>. The common steps for testing SEIMS with the demo data are as follows:</p>
-<div class="fragment"><div class="line">cd SEIMS</div><div class="line">mkdir build</div><div class="line">cd build</div><div class="line">cmake .. -DCMAKE_BUILD_TYPE=Release</div><div class="line">make -j4</div><div class="line">make install</div><div class="line">cd ..</div><div class="line"># Run demo data, e.g., dianbu2 watershed</div><div class="line">python seims/test/demo_dianbu2_preprocess.py</div><div class="line">python seims/test/demo_dianbu2_runmodel.py</div><div class="line">python seims/test/demo_dianbu2_postprocess.py</div><div class="line"># TO BE CONTINUED...</div></div><!-- fragment --><h3>3.5.Build your own model</h3>
-<p>Now, you can build you own SEIMS model!</p>
-<p>SEIMS workflow can be summarized as five part.</p>
-<ul>
-<li>a) <a href="https://github.com/lreis2415/SEIMS2017/wiki/Data-preparation">Data preparation</a> and <a href="https://github.com/lreis2415/SEIMS2017/wiki/Data-preprocess">Preprocessing for SEIMS</a></li>
-<li>b) <a href="https://github.com/lreis2415/SEIMS2017/wiki/Executation-and-calibration">Run SEIMS model</a></li>
-<li>c) <a href="https://github.com/lreis2415/SEIMS2017/wiki/result-postprocess">Postprocess, e.g. export hydrograph</a></li>
-<li>d) Model calibration</li>
-<li>e) Scenario analysis</li>
-<li>Features</li>
-</ul>
-<h2>Contact Us</h2>
-<ul>
-<li>Dr. Liang-Jun Zhu (<a href="#" onclick="location.href='mai'+'lto:'+'zlj'+'@l'+'rei'+'s.'+'ac.'+'cn'; return false;">zlj@l<span style="display: none;">.nosp@m.</span>reis<span style="display: none;">.nosp@m.</span>.ac.c<span style="display: none;">.nosp@m.</span>n</a>)</li>
-<li>Asso. Prof. Junzhi Liu (<a href="#" onclick="location.href='mai'+'lto:'+'liu'+'ju'+'nzh'+'i@'+'njn'+'u.'+'edu'+'.c'+'n'; return false;">liuju<span style="display: none;">.nosp@m.</span>nzhi<span style="display: none;">.nosp@m.</span>@njnu<span style="display: none;">.nosp@m.</span>.edu<span style="display: none;">.nosp@m.</span>.cn</a>) </li>
+<li>Linux(Ubuntu trusty)-GCC-4.8 with MPICH2-3.0.4: <a href="https://travis-ci.org/lreis2415/SEIMS"></a> </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
