@@ -1,4 +1,4 @@
-# Doxyfile 1.8.9.1
+# Doxyfile 1.8.13
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
@@ -45,6 +45,7 @@ OPTIMIZE_FOR_FORTRAN   = NO
 OPTIMIZE_OUTPUT_VHDL   = NO
 EXTENSION_MAPPING      = 
 MARKDOWN_SUPPORT       = YES
+TOC_INCLUDE_HEADINGS   = 3
 AUTOLINK_SUPPORT       = YES
 BUILTIN_STL_SUPPORT    = NO
 CPP_CLI_SUPPORT        = NO
