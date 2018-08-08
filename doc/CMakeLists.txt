@@ -4,8 +4,8 @@ IF(NOT DOXYGEN_FOUND)
     MESSAGE(STATUS "No Doxygen found. Documentation won't be built")
 ELSE()
     file(GLOB SOURCES ${CMAKE_CURRENT_LIST_DIR}/../seims/src/seims_main/*)
-    file(GLOB MARKDOWN_DOC ${CMAKE_CURRENT_LIST_DIR}/../doc/en/*.md
-                           ${CMAKE_CURRENT_LIST_DIR}/../doc/zh-cn/*.md)
+    file(GLOB MARKDOWN_DOC ${CMAKE_CURRENT_LIST_DIR}/../doc/en/doc/*.md
+                           ${CMAKE_CURRENT_LIST_DIR}/../doc/zh-cn/doc/*.md)
     list(APPEND MARKDOWN_DOC ${CMAKE_CURRENT_LIST_DIR}/../README.md)
 
     CONFIGURE_FILE(Doxyfile.in Doxyfile @ONLY)

@@ -6,8 +6,18 @@
     "author":"Liang-Jun Zhu",
     "plugins": ["-lunr", "-search", "search-plus", "versions-select"],
 	"pluginsConfig": {
+        "gitbookConfigURL":"https://github.com/crazyzlj/SEIMS_doc/blob/master/book.json",
 	    "versions": {
-	        "type": "languages"
+            "options": [
+                {
+                    "value":"https://crazyzlj.gitbooks.io/seims_doc_test/content/en",
+                    "text":"English"
+                },
+                {
+                    "value":"https://crazyzlj.gitbooks.io/seims_doc_test/content/zh-cn",
+                    "text":"简体中文"
+                }
+            ]
 	    }
     }
 }
