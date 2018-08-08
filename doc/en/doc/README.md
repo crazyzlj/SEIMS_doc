@@ -1,8 +1,5 @@
-
-
 # A lightweighted, modular, and parallelized watershed modeling framework
 
-[TOC]
 
 Copyright (C) 2018 [Lreis](http://www.lreis.ac.cn), [IGSNRR](http://english.igsnrr.cas.cn), [CAS](http://english.cas.cn). All rights reserved.
 
