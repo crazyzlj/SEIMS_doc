@@ -1,7 +1,17 @@
 var NAVTREE =
 [
   [ "SEIMS", "index.html", [
-    [ "SEIMS: A modular and parallelized watershed modeling framework", "index.html", null ],
+    [ "A lightweighted, modular, and parallelized watershed modeling framework", "index.html", [
+      [ "Brief introduction", "index.html#BriefIntroduction", null ],
+      [ "Get Started", "index.html#GetStarted", [
+        [ "Get Source Code", "index.html#GetSourceCode", null ],
+        [ "Compile & Install", "index.html#CompileInstall", null ],
+        [ "Config MongoDB", "index.html#ConfigMongoDB", null ],
+        [ "Run Demo Data", "index.html#RunDemoData", null ],
+        [ "Build Your Own Model", "index.html#BuildYourOwnModel", null ]
+      ] ],
+      [ "Contact Us", "index.html#ContactUs", null ]
+    ] ],
     [ "Features", "md_doc_en_doc_features.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
