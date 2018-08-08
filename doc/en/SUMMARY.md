@@ -1,8 +1,8 @@
 # Summary
 
-## \[Introduction\]\(README.md\)
+## [Introduction](README.md)
 
-* \[Features\]\(doc/en/features.md\)
+* [Features](doc/en/features.md)
 
 
 
