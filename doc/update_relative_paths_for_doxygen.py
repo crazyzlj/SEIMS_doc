@@ -51,14 +51,12 @@ def replace_relative_paths(filepath, relative_path):
     with open(filepath, 'r') as f:
         for line in f.readlines():
             lines.append(line.strip())
-    rewrite = False
     new_lines = list()
     for line in lines:
         new_lines.append(regrex_find_md_link(line, relative_path))
-    if rewrite:
-        with open(filepath, 'w') as f:
-            for line in lines:
-                f.write(line + os.linesep)
+    with open(filepath, 'w') as f:
+        for line in new_lines:
+            f.write(line)
 
 
 def main(fpath, relative_path):
