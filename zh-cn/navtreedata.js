@@ -1,7 +1,7 @@
 var NAVTREE =
 [
   [ "SEIMS", "index.html", [
-    [ "SEIMS: A modular and parallelized watershed modeling framework", "index.html", null ],
+    [ "SEIMS：轻量化、模块化、并行化的流域建模框架", "index.html", null ],
     [ "特点", "md_doc_zh-cn_doc_features_8zh-cn.html", null ],
     [ "类", "annotated.html", [
       [ "类列表", "annotated.html", "annotated_dup" ],
