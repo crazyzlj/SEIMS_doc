@@ -12,6 +12,14 @@ var NAVTREE =
       ] ],
       [ "Contact Us", "index.html#ContactUs", null ]
     ] ],
+    [ "Publications", "md_doc_en_doc_publications.html", [
+      [ "Peer-reviewed journal papers", "md_doc_en_doc_publications.html#PeerReviewedJournalPapers", [
+        [ "Modeling framework related", "md_doc_en_doc_publications.html#ModelingFramework", null ],
+        [ "BMPs scenario analysis", "md_doc_en_doc_publications.html#BMPsScenarioAnalysis", null ],
+        [ "Reviews of watershed modeling and scenario analysis", "md_doc_en_doc_publications.html#ReviewsWatershedModelingScenarioAnalysis", null ]
+      ] ],
+      [ "Dissertations", "md_doc_en_doc_publications.html#Dissertations", null ]
+    ] ],
     [ "Features", "md_doc_en_doc_features.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
