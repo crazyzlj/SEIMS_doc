@@ -2,7 +2,7 @@
 
 ## \[Introduction\]\(README.md\)
 
-* \[Features\]\(features.md\)
+* \[Features\]\(doc/en/features.md\)
 
 
 
