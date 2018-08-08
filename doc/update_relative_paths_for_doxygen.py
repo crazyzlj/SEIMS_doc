@@ -40,9 +40,8 @@ def regrex_find_md_link(test_str, prefix):
         replaced_str = replaced_str[: i + j + 2] + prefix + replaced_str[i + j + 2:]
         flag = True
     if flag:
-        print(test_str)
-        print(replaced_str)
-    return replaced_str
+        print('origin: %s, replaced: %s' % (test_str, replaced_str))
+    return replaced_str, flag
 
 
 def replace_relative_paths(filepath, relative_path):
@@ -51,12 +50,17 @@ def replace_relative_paths(filepath, relative_path):
     with open(filepath, 'r') as f:
         for line in f.readlines():
             lines.append(line.strip())
+    rewrite = False
     new_lines = list()
     for line in lines:
-        new_lines.append(regrex_find_md_link(line, relative_path))
-    with open(filepath, 'w') as f:
-        for line in new_lines:
-            f.write(line)
+        replaced_line, flag = regrex_find_md_link(line, relative_path)
+        new_lines.append(replaced_line)
+        if flag:
+            rewrite = True
+    if rewrite:
+        with open(filepath, 'w') as f:
+            for line in new_lines:
+                f.write(line + '\n')
 
 
 def main(fpath, relative_path):
