@@ -117,7 +117,7 @@ WARN_LOGFILE           =
 
 INPUT                  = README.md \
                          seims/src/seims_main/ \
-                         doc/features.md
+                         doc/en/features.md
 INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          = *.c \
                          *.cc \
