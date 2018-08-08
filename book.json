@@ -6,6 +6,8 @@
     "author":"Liang-Jun Zhu",
     "plugins": ["-lunr", "-search", "search-plus", "versions"],
 	"pluginsConfig": {
-	    "versions": "languages"
+        "versions": {
+            "type": "languages"
+        }
     }
 }
