@@ -1,7 +1,7 @@
 {
-	"gitbook":">=3.0.0",
-	"root":"./doc",
-	"title":"SEIMS Documentation Version 2018",
-	"description":"",
-	"author":"Liang-Jun Zhu",
+    "gitbook":">=3.0.0",
+    "root":"./doc",
+    "title":"SEIMS Documentation Version 2018",
+    "description":"",
+    "author":"Liang-Jun Zhu",
 }
