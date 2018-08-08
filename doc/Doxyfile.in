@@ -1,4 +1,4 @@
-# Doxyfile 1.8.13
+# Doxyfile 1.8.14
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
@@ -45,7 +45,7 @@ OPTIMIZE_FOR_FORTRAN   = NO
 OPTIMIZE_OUTPUT_VHDL   = NO
 EXTENSION_MAPPING      = 
 MARKDOWN_SUPPORT       = YES
-TOC_INCLUDE_HEADINGS   = 3
+#TOC_INCLUDE_HEADINGS   = 3
 AUTOLINK_SUPPORT       = YES
 BUILTIN_STL_SUPPORT    = NO
 CPP_CLI_SUPPORT        = NO
@@ -117,6 +117,7 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 
 INPUT                  = doc/en/doc/README.md \
+                         doc/en/doc/tutorial.md \
                          doc/en/doc/features.md \
                          seims/src/seims_main/
 INPUT_ENCODING         = UTF-8
