@@ -49,7 +49,7 @@ def replace_relative_paths(filepath, relative_path):
     lines = list()
     with open(filepath, 'r') as f:
         for line in f.readlines():
-            lines.append(line.strip())
+            lines.append(line)
     rewrite = False
     new_lines = list()
     for line in lines:
@@ -60,7 +60,7 @@ def replace_relative_paths(filepath, relative_path):
     if rewrite:
         with open(filepath, 'w') as f:
             for line in new_lines:
-                f.write(line + '\n')
+                f.write(line)
 
 
 def main(fpath, relative_path):
