@@ -11,7 +11,17 @@
                 "copy-code-button"],
 	"pluginsConfig": {
         "versions": {
-            "type": "languages"
+            "options": [
+                {
+                    "value": "https://crazyzlj.gitbooks.io/seims_doc_test/en/",
+                    "text": "English",
+                    "selected": true
+                },
+                {
+                    "value": "https://crazyzlj.gitbooks.io/seims_doc_test/zh-cn/",
+                    "text": "简体中文"
+                }
+            ]
         },
         "sharing": {
             "douban": false,
