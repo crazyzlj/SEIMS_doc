@@ -192,6 +192,9 @@ div.fragment {
 	background-color: #343131;
     /* Comment for resizable sidebar. By Liangjun */
 	/* width: 250px !important; */
+    /* Add max. and min. strict. By Liangjun */
+    min-width: 250px;
+    max-width: 400px;
 	height: 100% !important;
 	position: fixed;
 }
@@ -259,7 +262,7 @@ div.fragment {
 .ui-resizable .ui-resizable-handle
 {
     /* Change from 0px to 3px for resizable sidebar. By Liangjun */
-	width: 3px;
+	width: 5px;
 }
 
 #nav-path
