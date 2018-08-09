@@ -192,13 +192,13 @@ div.fragment {
 	width: 250px !important;
 	height: 100% !important;
 	position: fixed;
+    overflow:auto;
 }
 
 #nav-tree
 {
 	background-color: transparent;
 	background-image: none;
-    width: 300px;
 	height: 100% !important;
 }
 
