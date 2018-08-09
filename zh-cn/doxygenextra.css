@@ -198,6 +198,7 @@ div.fragment {
 {
 	background-color: transparent;
 	background-image: none;
+    width: 300px;
 	height: 100% !important;
 }
 
