@@ -125,7 +125,8 @@ table.doxtable td, table.doxtable th {
 	background-color: #fff;
 	width: 918px;
 	height: auto !important;
-	margin-left: 270px !important;
+    /* Comment for resizable sidebar. By Liangjun */
+	/* margin-left: 270px !important; */
 }
 
 div.contents {
@@ -189,7 +190,8 @@ div.fragment {
 	padding: 10px 0px 20px 20px;
 	border-top: 60px solid #2980b9;
 	background-color: #343131;
-	width: 250px !important;
+    /* Comment for resizable sidebar. By Liangjun */
+	/* width: 250px !important; */
 	height: 100% !important;
 	position: fixed;
 }
@@ -256,7 +258,8 @@ div.fragment {
 
 .ui-resizable .ui-resizable-handle
 {
-	width: 0px;
+    /* Change from 0px to 3px for resizable sidebar. By Liangjun */
+	width: 3px;
 }
 
 #nav-path
