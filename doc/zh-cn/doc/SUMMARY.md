@@ -1,10 +1,11 @@
 # Summary
 
-## [简介](README.md)
+## [概述]
 
-* [Publications](publications.md)
-    * [Peer-reviewed papers](publications.md#PeerReviewedJournalPapers)
-    * [Dissertations](publications.md#Dissertations)
+* [简介](README.md)
+* [论文著作](publications.zh-cn.md)
+    * [期刊文章](publications.zh-cn.md#PeerReviewedJournalPapers)
+    * [学位论文](publications.zh-cn.md#Dissertations)
 
 ## 第一部分 使用指南
 
