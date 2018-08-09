@@ -4,21 +4,22 @@
     "title":"SEIMS Documentation Version 2018",
     "description":"",
     "author":"Liang-Jun Zhu",
-    "plugins": ["-lunr", "-search", "search-plus", "versions", "splitter",
+    "plugins": ["-lunr", "-search", "search-plus", "versions-select", "splitter",
                 "-sharing", "sharing-plus",
                 "tbfed-pagefooter", "expandable-chapters-small",
                 "simple-page-toc", "anchor-navigation-ex",
                 "copy-code-button"],
 	"pluginsConfig": {
         "versions": {
+            "gitbookConfigURL": "https://github.com/crazyzlj/SEIMS_doc/blob/master/book.json",
             "options": [
                 {
-                    "value": "https://crazyzlj.gitbooks.io/seims_doc_test/en/",
+                    "value": "../en",
                     "text": "English",
                     "selected": true
                 },
                 {
-                    "value": "https://crazyzlj.gitbooks.io/seims_doc_test/zh-cn/",
+                    "value": "../zh-cn",
                     "text": "简体中文"
                 }
             ]
