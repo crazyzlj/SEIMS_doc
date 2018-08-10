@@ -1,7 +1,7 @@
 {
     "gitbook":">=3.0.0",
     "root":"doc",
-    "title":"SEIMS Documentation Version 2018",
+    "title":"TEST for SEIMS Documentation",
     "description":"",
     "author":"Liang-Jun Zhu",
     "plugins": ["-lunr", "-search", "search-plus", "versions-select", "splitter",
