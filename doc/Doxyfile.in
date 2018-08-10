@@ -117,8 +117,7 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 
 INPUT                  = doc/en/doc/README.md \
-                         doc/en/doc/publications.md \
-                         doc/en/doc/features.md \
+                         doc/en/doc/SUMMARY.md \
                          seims/src/seims_main/
 INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          = *.c \
